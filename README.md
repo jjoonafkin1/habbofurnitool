@@ -1,7 +1,8 @@
 # Habbo Furni tool
-Welcome to the Habbo Hotel: Origins furni tool repository!
-This tool is designed to help improve the management of items in the notoriously cumbersome Habbo Hotel hand interface.
-This is the first version release, and while it has been minimally tested, it offers basic functionality to make item management easier. Code itself will definitely not be the prettiest you've seen since it's my first touch to AutoHotkey and after all im just a self-taught semi nerd.
+Welcome to the Habbo Hotel: Origins Furni Tool repository! This tool is designed to improve the management of items in the cumbersome Habbo Hotel hand interface.
+
+This is the first version release and, while minimally tested, it offers basic functionality to ease item management. Note that this is my first project with AutoHotkey and the code may not be the prettiest, as I am a self-taught semi nerd.
+
 
 ## Features
 * **Placing Items from Hand to Room**: Automates selecting furni from your hand and placing it directly into your room.
