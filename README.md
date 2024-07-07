@@ -5,9 +5,21 @@ This is the first version release and, while minimally tested, it offers basic f
 
 
 ## Features
-* **Placing Items from Hand to Room**: Automates selecting furni from your hand and placing it directly into your room.
-* **Picking Up Items from Room to Hand**: Automates picking up items from your room back to your hand.
-* **Placing Items from Hand to Trade Window**: Automates transferring items from your hand to the trade window.
+<table>
+  <tr>
+    <td>
+      <ul>
+        <li><strong>Placing Items from Hand to Room</strong>: Automates selecting furni from your hand and placing it directly into your room.</li>
+        <li><strong>Picking Up Items from Room to Hand</strong>: Automates picking up items from your room back to your hand.</li>
+        <li><strong>Placing Items from Hand to Trade Window</strong>: Automates transferring items from your hand to the trade window.</li>
+      </ul>
+    </td>
+    <td>
+      <img src="https://github.com/jjoonafkin1/habbofurnitool/assets/94869520/67681689-dcde-4ac0-af19-54a547e02ecb" alt="Feature Image" width="300">
+    </td>
+  </tr>
+</table>
+
 
 ## Usage
 * **Option 1**: Download the ready-converted script to EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v1.0.0/Habbo.Furni.Tool.exe).
