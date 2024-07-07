@@ -4,9 +4,9 @@ This tool is designed to help improve the management of items in the notoriously
 This is the first version release, and while it has been minimally tested, it offers basic functionality to make item management easier. Code itself will definitely not be the prettiest you've seen since it's my first touch to AutoHotkey and after all im just a self-taught semi nerd.
 
 ## Features
-* **Placing Items from Hand to Room**: Automates the process of selecting furni from your hand and placing them directly into your room.
+* **Placing Items from Hand to Room**: Automates selecting furni from your hand and placing it directly into your room.
 * **Picking Up Items from Room to Hand**: Automates picking up items from your room back to your hand.
-* **Placing Items from Hand to Trade Window**: Automates the action of transferring items from your hand to the trade window.
+* **Placing Items from Hand to Trade Window**: Automates transferring items from your hand to the trade window.
 
 ## Usage
 * **Option 1**: Download the ready-converted script to EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v1.0.0/Habbo.Furni.Tool.exe).
