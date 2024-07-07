@@ -15,7 +15,7 @@ This is the first version release and, while minimally tested, it offers basic f
       </ul>
     </td>
     <td>
-      <img src="https://github.com/jjoonafkin1/habbofurnitool/assets/94869520/67681689-dcde-4ac0-af19-54a547e02ecb" alt="Feature Image" width="300">
+      <img src="https://github.com/jjoonafkin1/habbofurnitool/assets/94869520/67681689-dcde-4ac0-af19-54a547e02ecb">
     </td>
   </tr>
 </table>
