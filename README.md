@@ -9,9 +9,9 @@ This is the first version release and, while minimally tested, it offers basic f
   <tr>
     <td>
       <ul>
-        <li><strong>Placing Items from Hand to Room</strong>: Automates selecting furni from your hand and placing it directly into your room.</li>
-        <li><strong>Picking Up Items from Room to Hand</strong>: Automates picking up items from your room back to your hand.</li>
-        <li><strong>Placing Items from Hand to Trade Window</strong>: Automates transferring items from your hand to the trade window.</li>
+        <li><strong>Place in room</strong>: Automates selecting furni from your hand and placing it into your room.</li>
+        <li><strong>Pickup from room</strong>: Automates picking up items from your room back to your hand.</li>
+        <li><strong>Add to trade</strong>: Automates transferring items from your hand to the trade window.</li>
       </ul>
     </td>
     <td>
