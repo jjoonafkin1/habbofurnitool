@@ -4,9 +4,9 @@ This tool is designed to help improve the management of items in the notoriously
 This is the first version release, and while it has been minimally tested, it offers basic functionality to make item management easier.
 
 ## Features
-* Placing Items from Hand to Room: Automates the process of selecting furni from your hand and placing them directly into your room.
-* Picking Up Items from Room to Hand: Automates picking up items from your room back to your hand.
-* Placing Items from Hand to Trade Window: Automates the action of transferring items from your hand to the trade window.
+* **Placing Items from Hand to Room**: Automates the process of selecting furni from your hand and placing them directly into your room.
+* **Picking Up Items from Room to Hand**: Automates picking up items from your room back to your hand.
+* **Placing Items from Hand to Trade Window**: Automates the action of transferring items from your hand to the trade window.
 
 ## Notes
 * This is the first version release and has undergone minimal testing. Use at your own risk.
