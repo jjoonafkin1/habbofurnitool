@@ -9,7 +9,7 @@ This is the first version release, and while it has been minimally tested, it of
 * **Placing Items from Hand to Trade Window**: Automates the action of transferring items from your hand to the trade window.
 
 ## Usage
-* **Option 1.** Ready converted script to EXE can be downloaded [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v1.0.0/Habbo.Furni.Tool.exe).
+* **Option 1**: Download the ready-converted script to EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v1.0.0/Habbo.Furni.Tool.exe).
 * **Option 2.** Download the source code as zip, extract to a folder and run **habbo.ahk**
 
 ## Notes
