@@ -26,5 +26,7 @@ While this project is open source and licensed under the [MIT License](https://g
 * Thanks to the AutoHotkey community for providing a great scripting language and helpful resources.
 * Special thanks to the testers who provided initial feedback and bug reports.
 
+## Donations
+* Donations for this open-source project are not solicited but are sincerely appreciated. If you find the project useful and would like to contribute to its ongoing development and maintenance, your support is welcomed. Please feel free to contact me via Discord @jjoona for any inquiries or to express your appreciation. Thank you for considering supporting this project!
 
 I hope this tool makes your Habbo Hotel experience more enjoyable. Happy roleplaying and trading!
