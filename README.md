@@ -29,7 +29,7 @@ This is the second version release and while minimally tested it offers basic fu
 
 
 ## Usage
-* **Option 1**: Download the ready-converted .EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v2.0.0/Origins.Multi-tool.exe).
+* ~~**Option 1**: Download the ready-converted .EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v2.0.0/Origins.Multi-tool.exe).~~ **NOTE! USE OPTION #2 FOR NOW**
 * **Option 2.** Download the source code as zip, extract to a folder and run **habbo.ahk**
 
 ## Notes
