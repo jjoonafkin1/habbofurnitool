@@ -67,35 +67,188 @@ firstHandPath := A_ScriptDir . "\images\firstHand.png"
 nextHandPath := A_ScriptDir . "\images\nextHand.png"
 
 myGui := Constructor()
-myGui.Show("w257 h185")
+myGui.Show("w220 h193")
 myGui.Opt("+AlwaysOnTop")
 
 Constructor() {
+    guiPics := A_ScriptDir . "\images\"
     myGui := Gui()
+    Tab := myGui.Add("Tab3", "x0 y0 w230 h198", ["Furni tool", "Dice roller", "Credits"])
+    Tab.UseTab(1)
     myGui.SetFont("s16", "Tahoma")
-    myGui.AddText("x8 y8 w161 h23 +0x200", "Habbo Furni tool")
+    myGui.AddText("x8 y18 w161 h23 +0x200", "Habbo Furni Tool")
     myGui.SetFont("s8", "Tahoma")
-    myGui.AddText("x8 y32 w55 h23 +0x200", "Select item:")
-    myGui.AddText("x8 y56 w72 h23 +0x200", "Enter quantity:")
-    dropdownItem := myGui.AddDropDownList("vDDLItems x64 y32 w106 +Sort Choose1", ["Club Sofa", "Cola Machine", "Dicemaster", "Imperial Teleport", "Majestic Chair", "Mochamaster", "Oil Lamp", "Petal Patch", "Purple Pillow", "Study Desk", "Throne Sofa", "Tubmaster"])
-    quantity := myGui.AddEdit("x80 y56 w90 h21 +number", "1")
-    myGui.AddUpDown("x152 y56 w18 h21", "1")
+    myGui.AddText("x8 y42 w55 h23 +0x200", "Select item:")
+    myGui.AddText("x8 y66 w72 h23 +0x200", "Enter quantity:")
+    dropdownItem := myGui.AddDropDownList("vDDLItems x64 y42 w146 +Sort Choose1", ["Club Sofa", "Cola Machine", "Dicemaster", "Imperial Teleport", "Majestic Chair", "Mochamaster", "Oil Lamp", "Petal Patch", "Purple Pillow", "Study Desk", "Throne Sofa", "Tubmaster"])
+    quantity := myGui.AddEdit("x80 y66 w130 h21 +number", "1")
+    myGui.AddUpDown("x152 y66 w18 h21", "1")
     myGui.SetFont("s16", "Tahoma")
-    myGui.AddText("x8 y80 w120 h23 +0x200", "Actions")
+    myGui.AddText("x8 y90 w120 h23 +0x200", "Actions")
     myGui.SetFont("s8", "Tahoma")
-    ButtonPlaceInRoom := myGui.AddButton("x8 y104 w162 h23", "Place in room")
-    ButtonPickupFromRoom := myGui.AddButton("x8 y128 w162 h23", "Pickup from room")
-    ButtonAddToTrade := myGui.AddButton("x8 y152 w162 h23", "Add to trade")
-    myGui.AddPicture("x176 y64 w72 h89", A_ScriptDir . "\images\charru.png")
-    myGui.AddPicture("x182 y152 w24 h24", A_ScriptDir . "\images\discord.png")
-    myGui.SetFont("s8 Underline c0x000000", "Tahoma")
-    myGui.AddText("x210 y158 w30 h17", "jjoona")
+    ButtonPlaceInRoom := myGui.AddButton("x8 y114 w205 h23", "Place in room")
+    ButtonPickupFromRoom := myGui.AddButton("x8 y138 w205 h23", "Pickup from room")
+    ButtonAddToTrade := myGui.AddButton("x8 y162 w205 h23", "Add to trade")
     ButtonPlaceInRoom.OnEvent("Click", (*) => PlaceInRoom(dropdownItem, quantity))
     ButtonPickupFromRoom.OnEvent("Click", (*) => PickupFromRoom(dropdownItem, quantity))
     ButtonAddToTrade.OnEvent("Click", (*) => AddToTrade(dropdownItem, quantity))
+    Tab.UseTab(2)
+    myGui.SetFont("s16", "Tahoma")
+    myGui.Add("Text", "x8 y18 w120 h23 +0x200", "Dice Roller")
+    myGui.SetFont("s8", "Tahoma")
+    myGui.SetFont("s16", "Tahoma")
+    myGui.Add("Text", "x8 y88 w120 h23 +0x200", "Games")
+    myGui.SetFont("s8", "Tahoma")
+    ButtonSetdicepositions := myGui.Add("Button", "x8 y42 w204 h23", "Set dice positions")
+    ButtonResetdices := myGui.Add("Button", "x8 y64 w204 h23", "Reset dices")
+    Button13 := myGui.Add("Button", "x8 y112 w102 h23", "13")
+    Button21 := myGui.Add("Button", "x110 y112 w102 h23", "21")
+    ButtonTri := myGui.Add("Button", "x8 y136 w204 h23", "Tri")
+    ButtonPoker := myGui.Add("Button", "x8 y160 w204 h23", "Poker")
+    ButtonSetdicepositions.OnEvent("Click", (*) => Setdicepositions())
+    ButtonResetdices.OnEvent("Click", (*) => Resetdices())
+    Button13.OnEvent("Click", (*) => Roll13())
+    Button13.ToolTip := "Roll first two dices"
+    Button21.OnEvent("Click", (*) => Roll21())
+    Button21.ToolTip := "Roll first three dices"
+    ButtonTri.OnEvent("Click", (*) => RollTri())
+    ButtonTri.ToolTip := "Roll 1st, 3rd and 5th dice"
+    ButtonPoker.OnEvent("Click", (*) => RollPoker())
+    ButtonPoker.ToolTip := "Roll all 5 dices"
+    Tab.UseTab(3)
+    myGui.SetFont("s8", "Tahoma")
+    myGui.Add("Text", "x8 y24 w201 h48", "This is an open-source project available at github.com/jjoonafkin1/habbofurnitool`nand its licensed under the MIT License.")
+    myGui.SetFont("s16", "Tahoma")
+    myGui.Add("Picture", "x8 y72 w32 h32", guiPics "github.png")
+    myGui.Add("Picture", "x8 y152 w32 h32", guiPics "discord.png")
+    myGui.Add("Picture", "x8 y112 w32 h32", guiPics "origins.png")
+    myGui.Add("Picture", "x136 y96 w72 h89", guiPics "charru.png")
+    myGui.Add("Text", "x48 y72 w106 h32 +0x200", "jjoonafkin1")
+    myGui.Add("Text", "x48 y112 w90 h32 +0x200", "visvakulli")
+    myGui.Add("Text", "x48 y152 w80 h32 +0x200", "jjoona")
     myGui.OnEvent('Close', (*) => ExitApp())
     myGui.Title := "Furni Tool"
     return myGui
+}
+
+OnMessage(0x0200, On_WM_MOUSEMOVE)
+On_WM_MOUSEMOVE(wParam, lParam, msg, Hwnd)
+{
+    static PrevHwnd := 0
+    if (Hwnd != PrevHwnd)
+    {
+        Text := "", ToolTip()
+        CurrControl := GuiCtrlFromHwnd(Hwnd)
+        if CurrControl
+        {
+            if !CurrControl.HasProp("ToolTip")
+                return
+            Text := CurrControl.ToolTip
+            SetTimer () => ToolTip(Text), -25
+            SetTimer () => ToolTip(), -4000
+        }
+        PrevHwnd := Hwnd
+    }
+}
+
+GetHabboClient() {
+    if !WinExist("Habbo Hotel: Origins") {
+        ToolTip("Please make sure you have the Habbo client running.")
+        SetTimer(() => ToolTip(), -2000)
+    }
+    WinActivate 
+}
+
+positions := []
+
+Setdicepositions() {
+    GetHabboClient()
+    global positions
+    positions := []
+    MsgBox("Roll all 5 dices please.")
+    Loop 10 {
+        KeyWait "LButton", "D"
+            global positions
+            MouseGetPos(&x, &y)
+            positions.Push({x: x, y: y})
+            ToolTip("Position saved: " x ", " y)
+            SetTimer(() => ToolTip(), -1000)
+        sleep(500)
+        If A_Index = 5 {
+            MsgBox("Reset all 5 dices please.")
+        }
+    }
+    MsgBox("Dice positions saved.")
+}
+
+Resetdices() {
+    GetHabboClient()
+    global positions
+    resetCounter := 6
+    Loop 5 {
+        MouseMove(positions[resetCounter].x, positions[resetCounter].y)
+        Click("Left")
+        sleep(125)
+        Click("left")
+        Sleep(400)
+        resetCounter++
+    }
+}
+
+Roll13() {
+    GetHabboClient()
+    global positions
+    roll13Counter := 1
+    Loop 2 {
+        MouseMove(positions[roll13Counter].x, positions[roll13Counter].y)
+        Click("Left")
+        sleep(125)
+        Click("left")
+        Sleep(400)
+        roll13Counter++
+    }
+}
+
+Roll21() {
+    GetHabboClient()
+    global positions
+    roll21Counter := 1
+    Loop 3 {
+        MouseMove(positions[roll21Counter].x, positions[roll21Counter].y)
+        Click("Left")
+        sleep(125)
+        Click("left")
+        Sleep(400)
+        roll21Counter++
+    }
+}
+
+RollTri() {
+    GetHabboClient()
+    global positions
+    rollTriCounter := 1
+    Loop 3 {
+        MouseMove(positions[rollTriCounter].x, positions[rollTriCounter].y)
+        Click("Left")
+        sleep(125)
+        Click("left")
+        Sleep(400)
+        rollTriCounter += 2
+    }
+}
+
+RollPoker() {
+    GetHabboClient()
+    global positions
+    rollpokerCounter := 1
+    Loop 5 {
+        MouseMove(positions[rollpokerCounter].x, positions[rollpokerCounter].y)
+        Click("Left")
+        sleep(125)
+        Click("left")
+        Sleep(400)
+        rollpokerCounter++
+    }
 }
 
 PlaceInRoom(dropdownItem, quantity) {
@@ -113,13 +266,7 @@ PlaceInRoom(dropdownItem, quantity) {
     }
 
     Loop quantity.Value {
-        if !WinExist("Habbo Hotel: Origins") {
-            ToolTip("Please make sure you have the Habbo client running.")
-            SetTimer(() => ToolTip(), -2000)
-            break
-        }
-
-        WinActivate
+        GetHabboClient()
 
         CoordMode("Pixel", "Window")
         firstHandDetectionCount := 0
@@ -181,13 +328,7 @@ PickupFromRoom(dropdownItem, quantity) {
     }
 
     Loop quantity.Value {
-        if !WinExist("Habbo Hotel: Origins") {
-            ToolTip("Please make sure you have the Habbo client running.")
-            SetTimer(() => ToolTip(), -2000)
-            break
-        }
-
-        WinActivate
+        GetHabboClient()
 
         CoordMode("Pixel", "Window")
 
@@ -229,13 +370,7 @@ AddToTrade(dropdownItem, quantity) {
     }
 
     Loop quantity.Value {
-        if !WinExist("Habbo Hotel: Origins") {
-            ToolTip("Please make sure you have the Habbo client running.")
-            SetTimer(() => ToolTip(), -2000)
-            break
-        }
-
-        WinActivate
+        GetHabboClient()
 
         CoordMode("Pixel", "Window")
         firstHandDetectionCount := 0
