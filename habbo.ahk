@@ -127,7 +127,7 @@ Constructor() {
     myGui.Add("Text", "x48 y112 w90 h32 +0x200", "visvakulli")
     myGui.Add("Text", "x48 y152 w80 h32 +0x200", "jjoona")
     myGui.OnEvent('Close', (*) => ExitApp())
-    myGui.Title := "Furni Tool"
+    myGui.Title := "Multi-Tool"
     return myGui
 }
 
