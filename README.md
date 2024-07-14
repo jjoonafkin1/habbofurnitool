@@ -16,7 +16,9 @@ This is the second version release and while minimally tested it offers basic fu
       </ul>
       <h2>Dice Roller</h2>
       <ul>
-        <li><strong>Games</strong>: Automates dice rolling according to the chosen game.</li>
+        <li><strong>Games</strong>: Automates dice rolling according to the chosen game.<br>
+                                    - Now detects the roll outcomes and sums them up.<br>
+                                    - For poker rolls verifies dice values, and computes the best possible poker hand from the results.</li>
         <li><strong>Reset dices</strong>: Automates dice resetting after a game was played.</li>
       </ul>
     </td>
@@ -29,7 +31,7 @@ This is the second version release and while minimally tested it offers basic fu
 
 
 ## Usage
-* ~~**Option 1**: Download the ready-converted .EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v2.0.0/Origins.Multi-tool.exe).~~ **NOTE! USE OPTION #2 FOR NOW**
+* **Option 1**: Download the ready-converted .EXE [here](https://github.com/jjoonafkin1/habbofurnitool/releases/download/v2.1.0/Habbo_Multi-tool.exe).
 * **Option 2.** Download the source code as zip, extract to a folder and run **habbo.ahk**
 
 ## Notes
